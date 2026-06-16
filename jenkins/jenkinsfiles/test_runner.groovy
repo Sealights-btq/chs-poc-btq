@@ -349,7 +349,7 @@ pipeline {
               sh """
                       export MACHINE_DNS="${env.MACHINE_DNS}"
                       cd ./integration-tests/postman-tests/
-                      pnpm install sealights-newman-wrapper newman-reporter-xunit newman-reporter-junit5 slnodejs
+                      pnpm add sealights-newman-wrapper newman-reporter-xunit newman-reporter-junit5 slnodejs
                       echo 'Postman framework starting ..... '
                       ./node_modules/.bin/slnodejs start --labid ${params.SL_LABID} --token ${env.SL_TOKEN} --teststage "postman tests"
                       sleep 10
