@@ -48,8 +48,8 @@ pipeline {
       steps {
         script {
           sh """
-            corepack enable || true
-            corepack prepare pnpm@9 --activate || npm install -g pnpm@9
+            corepack disable pnpm || true
+            npm install -g pnpm@9 --force
           """
         }
       }
