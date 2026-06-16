@@ -13,7 +13,7 @@ RUN apk add --update --no-cache \
     g++
 
 # Install pnpm globally
-RUN npm install -g pnpm@latest
+RUN npm install -g pnpm@9
 
 WORKDIR /usr/src/app
 
@@ -26,7 +26,7 @@ RUN pnpm add ${SEALIGHTS_NODE_AGENT}
 FROM node:22-alpine
 
 # Install pnpm globally
-RUN npm install -g pnpm@latest
+RUN npm install -g pnpm@9
 
 WORKDIR /usr/src/app
 
