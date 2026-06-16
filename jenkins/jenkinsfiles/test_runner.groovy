@@ -49,7 +49,7 @@ pipeline {
         script {
           sh """
             corepack enable || true
-            corepack prepare pnpm@latest --activate || npm install -g pnpm
+            corepack prepare pnpm@9 --activate || npm install -g pnpm@9
           """
         }
       }
